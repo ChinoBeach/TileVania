@@ -53,3 +53,6 @@ TagManager:
   - name: Nature
     uniqueID: 2736873569
     locked: 0
+  - name: Player
+    uniqueID: 359504633
+    locked: 0
