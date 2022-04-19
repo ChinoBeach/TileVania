@@ -10,23 +10,24 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 moveInput;
     Rigidbody2D myRidgidBody;
-    
+
     void Start()
     {
         myRidgidBody = GetComponent<Rigidbody2D>();
     }
 
-  
+
     void Update()
     {
         Run();
+        FlipSprite();
     }
 
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
-    
+        //Debug.Log(moveInput);
+
     }
 
     void Run()
@@ -35,4 +36,16 @@ public class PlayerMovement : MonoBehaviour
 
         myRidgidBody.velocity = playerVelocity;
     }
+
+    void FlipSprite()
+    {
+        bool bolPlayerHasHorizontalSpeed = Mathf.Abs(myRidgidBody.velocity.x) > Mathf.Epsilon;
+
+        if (bolPlayerHasHorizontalSpeed)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(myRidgidBody.velocity.x), 1f);
+        }
+        
+    }
+
 }
