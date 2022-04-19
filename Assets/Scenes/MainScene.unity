@@ -22813,26 +22813,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1830810845681130110, guid: c3e99a2e4fd326949b94d6e60c0c9a0e, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269453278257406733, guid: c3e99a2e4fd326949b94d6e60c0c9a0e, type: 3}
-      propertyPath: m_GravityScale
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2269453278257406733, guid: c3e99a2e4fd326949b94d6e60c0c9a0e, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7658586094991400865, guid: c3e99a2e4fd326949b94d6e60c0c9a0e, type: 3}
-      propertyPath: fltJumpSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813758330826871644, guid: c3e99a2e4fd326949b94d6e60c0c9a0e, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: c5d1822ec45c74e40a03e113e100dab6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3e99a2e4fd326949b94d6e60c0c9a0e, type: 3}
 --- !u!95 &1830810846201553220 stripped
