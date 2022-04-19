@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //variables 
     [SerializeField] float fltRunSpeed = 10f;
+    [SerializeField] float fltJumpSpeed = 5f;
 
     Vector2 moveInput;
     Rigidbody2D myRidgidBody;
@@ -53,5 +54,11 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-
+    void OnJump(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            myRidgidBody.velocity += new Vector2 (0f, fltJumpSpeed);
+        }
+    }
 }
