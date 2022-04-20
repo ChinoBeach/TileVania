@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float fltJumpSpeed = 5f;
     [SerializeField] float fltClimbSpeed = 5f;
     [SerializeField] Vector2 deathKick = new Vector2(10f,10f);
+    [SerializeField] GameObject magic;
+    [SerializeField] Transform magicSpawn;
 
 
     Vector2 moveInput;
@@ -41,6 +43,13 @@ public class PlayerMovement : MonoBehaviour
         FlipSprite();
         ClimbLadder();
         Die();
+    }
+
+    void OnFire(InputValue value)
+    {
+        if (!bolIsAlive) { return; }
+
+        Instantiate(magic, magicSpawn.position, transform.rotation);
     }
 
     void OnMove(InputValue value)
