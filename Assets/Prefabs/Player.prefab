@@ -194,6 +194,8 @@ MonoBehaviour:
   fltJumpSpeed: 20
   fltClimbSpeed: 5
   deathKick: {x: 10, y: 10}
+  magic: {fileID: 9141468373767311945, guid: 051178d6649f728458147c962a286c4c, type: 3}
+  magicSpawn: {fileID: 5913335739658615733}
 --- !u!61 &3729412225618379792
 BoxCollider2D:
   m_ObjectHideFlags: 0
