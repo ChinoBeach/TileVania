@@ -124,3 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa87d11a1d40934d9cb52558de190ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fltLevelLoadDelay: 1
+  audioLoadLevel: {fileID: 8300000, guid: 5ab8fc664ca4d604f820e255005a664a, type: 3}

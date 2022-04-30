@@ -7,7 +7,9 @@ public class Fire : MonoBehaviour
     [SerializeField] float fltFireSpeed = 20f;
     Rigidbody2D myRigidbody2D;
     PlayerMovement player;
+    [SerializeField] AudioClip audioEnemyDeath;
     float fltXSpeed;
+
     void Start()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
@@ -26,6 +28,7 @@ public class Fire : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
+            AudioSource.PlayClipAtPoint(audioEnemyDeath, Camera.main.transform.position);
             Destroy(other.gameObject);
         }
         Destroy(gameObject);

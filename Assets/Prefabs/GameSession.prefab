@@ -47,7 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   intPlayerLives: 3
   livesText: {fileID: 2899273450696918723}
+  intScore: 0
   scoreText: {fileID: 2899273451621877316}
+  audioDeath: {fileID: 8300000, guid: 87e2452fe2c754248926c9a9ab93a467, type: 3}
 --- !u!1001 &6108684127943953094
 PrefabInstance:
   m_ObjectHideFlags: 0

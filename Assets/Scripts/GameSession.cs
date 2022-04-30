@@ -11,6 +11,9 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] int intScore = 0;
     [SerializeField] TextMeshProUGUI scoreText;
+
+    [SerializeField] AudioClip audioDeath;
+    
     void Awake()
     {
         int intNumGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -38,6 +41,8 @@ public class GameSession : MonoBehaviour
     }
     public void ProcessPlayerDeath()
     {
+       
+
         if (intPlayerLives > 1)
         {
             TakeLife();
@@ -50,7 +55,9 @@ public class GameSession : MonoBehaviour
 
     void TakeLife()
     {
+        AudioSource.PlayClipAtPoint(audioDeath, Camera.main.transform.position);
         intPlayerLives--;
+       
         int intCurrentScenceIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(intCurrentScenceIndex);
         livesText.text = intPlayerLives.ToString();
@@ -59,6 +66,7 @@ public class GameSession : MonoBehaviour
 
     void ResetGameSession()
     {
+        
         FindObjectOfType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);

@@ -23,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
 
     float fltGravityScaleAtStart;
     bool bolIsAlive = true;
+
+    
+    [SerializeField] AudioClip audioFire;
+
     
 
     void Start()
@@ -48,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     void OnFire(InputValue value)
     {
         if (!bolIsAlive) { return; }
-
+        AudioSource.PlayClipAtPoint(audioFire, Camera.main.transform.position);
         Instantiate(magic, magicSpawn.position, transform.rotation);
     }
 
@@ -115,12 +119,12 @@ public class PlayerMovement : MonoBehaviour
         {
             bolIsAlive = false;
 
-           // Debug.Log("Player Died");
-
+            // Debug.Log("Player Died");
+           
             myAnimator.SetTrigger("Dying");
-
+            
             myRidgidBody.velocity = deathKick;
-
+          
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
